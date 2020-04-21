@@ -1,0 +1,19 @@
+{
+	"parameters": [
+		{
+			"name": "MutualUtilityCost",
+			"range": [0,50]
+		},
+		{
+			"name": "EfficientRouteCost(a)",
+			"range": [0,50]
+		},
+		{
+			"name": "EfficientRouteCost(b)",
+			"range": [0,50]
+		}
+	],
+	"iteration" : 50,
+	"dtg" : "data/testapp1/20200417041832.gob",
+	"appid" : "testapp1"
+}

@@ -1,0 +1,12 @@
+{
+  "SchedulerWeights": {
+    "MutualUtilityCost": 1.0, 
+    "EfficientRouteCost(b)": 20, 
+    "WorkloadImbalanceCost": 1.0, 
+    "EfficientRouteCost(a)": 4.0, 
+    "Time2Cost": 1.0
+  }, 
+  "scheduler": "Beecluster", 
+  "backend": "simulator",
+  "simulatorconfig": "os/configs/simulator/config_replay.json"
+}

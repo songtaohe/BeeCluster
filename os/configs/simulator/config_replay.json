@@ -1,0 +1,14 @@
+{
+	"ndrone":1,
+	"location": [0.0, 0.0, 0.0],
+	"env" : "dont need",
+	"speed": 10,
+	"acc": 2,
+	"batteryTime": 2000,
+	"changeBatteryTime":30,
+	"simspeed":100,
+	"realspeed": 1,
+	"senseDelay": 1,
+	"replay": false,
+	"replayfile" : "replay1.json"
+}

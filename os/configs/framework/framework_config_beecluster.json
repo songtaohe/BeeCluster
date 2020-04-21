@@ -1,0 +1,13 @@
+{
+	"scheduler": "Beecluster",
+	"backend": "simulator",
+	"simulatorconfig": "os/configs/simulator/config.json",
+	"dronehubconfig": "os/configs/dronehub/droneHub_config.json",
+	"SchedulerWeights": {
+		"WorkloadImbalanceCost" : 1.0,
+		"MutualUtilityCost" : 1.0,
+		"EfficientRouteCost(a)" : 4.0,
+		"EfficientRouteCost(b)" : 20.0, 
+		"Time2Cost" : 1.0
+	} 
+}

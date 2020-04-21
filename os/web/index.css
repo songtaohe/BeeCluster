@@ -1,0 +1,87 @@
+svg.drawpath {
+	cursor: crosshair;
+}
+
+circle.draw:hover {
+	stroke-width: 2;
+	stroke: red;
+}
+
+line.draw {
+	pointer-events: none;
+}
+
+circle.jobs:hover {
+	stroke-width: 4;
+	stroke: orange;
+}
+
+line.jobs.outer:hover {
+	stroke-width: 4;
+	stroke: orange;
+}
+
+line.jobs.inner {
+	pointer-events: none;
+}
+
+#sidebar {
+	height: 100%;
+	width: 20px;
+	position: fixed;
+	overflow-x: hidden;
+	padding-left: 10px;
+	padding-top: 20px;
+}
+
+#codebar {
+	height: 800px;
+	width: 760px;
+	position: fixed;
+	overflow-x: hidden;
+	padding-left: 10px;
+	padding-top: 0px;
+	margin-left: 1640px;
+	border-top: 4px solid green;
+	border-bottom: 4px solid green;
+	border-left: 4px solid green;
+	border-right: 4px solid green;
+}
+
+#codebartwo {
+	height: 300px;
+	width: 560px;
+	position: fixed;
+	overflow-x: hidden;
+	padding-left: 580px;
+	padding-top: 0px;
+	margin-left: 0px;
+	border-top: 4px solid green;
+	border-bottom: 4px solid green;
+	border-left: 4px solid green;
+	border-right: 4px solid green;
+}
+
+#main {
+	margin-left: 0px;
+	border-top: 4px solid red;
+	border-bottom: 4px solid red;
+	border-left: 4px solid red;
+	border-right: 4px solid red;
+	height: 800px;
+	width: 800px;
+}
+
+#spec {
+	/*margin-left: 1640px;*/
+	margin-left: 810px;
+	margin-top: 0px;
+	border-top: 4px solid blue;
+	border-bottom: 4px solid blue;
+	border-left: 4px solid blue;
+	border-right: 4px solid blue;
+	height: 400px;
+	width: 400px;
+	padding-top: 0px;
+	position: fixed;
+}

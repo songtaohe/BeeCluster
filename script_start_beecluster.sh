@@ -1,0 +1,3 @@
+cp os/configs/framework/framework_config_beecluster.json os/configs/framework/framework_config.json
+mkdir -p log
+go run os/*.go
