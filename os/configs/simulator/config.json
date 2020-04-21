@@ -1,5 +1,5 @@
 {
-	"ndrone":2,
+	"ndrone":1,
 	"location": [0.0, 0.0, 0.0],
 	"env" : "dont need",
 	"speed": 10,
