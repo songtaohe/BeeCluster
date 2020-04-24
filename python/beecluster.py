@@ -640,6 +640,14 @@ class BeeCluster(object):
 	def BCUnLock(self):
 		self.internal_global_lock.release()
 
+	def waitUnfinishedTasks():
+		while True:
+			sleep(0.1)
+			cc = bc.active_task_counter
+			if cc == 0:
+
+				break
+
 
 	def newThread(self):
 		self.BCLock()
@@ -871,6 +879,7 @@ class BeeCluster(object):
 	def wait(self):
 		context = self.contexts[self.thisThread()]
 		context.wait()
+
 
 	def setFlags(self, SameDrone=None, NonInterruptible = None):
 		context = self.contexts[self.thisThread()]

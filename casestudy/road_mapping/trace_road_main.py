@@ -106,7 +106,7 @@ def _parse_result(ret, loc, yaw, stepsize):
 	return new_loc, yaw + dyaw 
 
 
-def trace_road(bc, loc, yaw):
+def take_photo(bc, loc, yaw):
 
 	# fly to 'loc' and change yaw
 	bc.act("set_yaw_" + str(yaw))
@@ -126,7 +126,7 @@ if __name__ == "__main__":
 
 	# trace 25 steps  
 	for i in range(1,25):
-		ret =  bc.newTask(trace_road, bc, loc, yaw, stepsize)
+		ret =  bc.newTask(take_photo, bc, loc, yaw, stepsize)
 
 		loc, yaw = _parse_result(ret, loc, yaw, stepsize)
 		

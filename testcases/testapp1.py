@@ -99,8 +99,6 @@ def SenseAndUpdate(bc, loc):
 if __name__ == "__main__":
 	beecluster.ResetRemoteServer()
 
-	t0 = time()
-
 	bc = beecluster.Session(appID = "testapp1")
 
 	# generate all the tasks (grid_size * grid_size)
@@ -109,21 +107,9 @@ if __name__ == "__main__":
 		h = bc.newTask(SenseAndUpdate, bc, loc, NonInterruptible = True, SameDrone = True)
 		loc2taskname[loc] = h.getTaskName()
 
-	step = 0
-	while True:
-		sleep(1.0)
-		cc = bc.active_task_counter
-		step += 1 
-		
-		if step % 5 == 0 :
-			print("active tasks", cc)
-
-		if cc == 0:
-			break
+	bc.waitUnfinishedTasks()
 
 	bc.close(SaveDTG=False)
+
 	print("duration", bc.getDuration())
-
-	print("wall time: ", time() - t0, "gp time: ", gptime)
-
 
