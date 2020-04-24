@@ -4,7 +4,7 @@
 # 
 # Test dynamic task cancellation in a Gaussian process example.
 # 
-# You can run this with one drone and two drones 
+# You can run this with 'beecluster' or 'baseline' 
 # to see the performance difference.
 #
 ####
