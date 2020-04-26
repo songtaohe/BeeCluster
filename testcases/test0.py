@@ -8,7 +8,6 @@
 
 import sys
 sys.path.append('../python') # path to beecluster
-#from beecluster import bc
 import beecluster
 from time import time, sleep 
 import threading

@@ -530,11 +530,18 @@ class Task(object):
 def Session(appID = "ABC123", BeeClusterControlEndpoint = "http://127.0.0.1:8008", BeeClusterDroneEndpoint = "http://127.0.0.1:8009"):
 	return BeeCluster(appID = appID, BeeClusterControlEndpoint = BeeClusterControlEndpoint, BeeClusterDroneEndpoint = BeeClusterDroneEndpoint)
 
+def session(appID = "ABC123", BeeClusterControlEndpoint = "http://127.0.0.1:8008", BeeClusterDroneEndpoint = "http://127.0.0.1:8009"):
+	return BeeCluster(appID = appID, BeeClusterControlEndpoint = BeeClusterControlEndpoint, BeeClusterDroneEndpoint = BeeClusterDroneEndpoint)
+
 def ResetRemoteServer(seed = None):	
 	if seed is None:
 		requests.get(url = "http://localhost:8007/reset")
 	else:
 		requests.get(url = "http://localhost:8007/reset?seed=%d" % seed)
+
+def resetRemoteServer(seed = None):	
+	ResetRemoteServer(seed)
+
 
 class BeeCluster(object):
 	def __init__(self, appID = "ABC123", BeeClusterControlEndpoint = "http://127.0.0.1:8008", BeeClusterDroneEndpoint = "http://127.0.0.1:8009"):
@@ -633,6 +640,13 @@ class BeeCluster(object):
 
 	def UnLock(self):
 		self.global_lock.release()
+
+	def lock(self):
+		self.global_lock.acquire() 
+
+	def unlock(self):
+		self.global_lock.release()
+
 
 	def BCLock(self):
 		self.internal_global_lock.acquire() 
