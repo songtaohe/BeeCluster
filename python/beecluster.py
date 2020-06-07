@@ -654,10 +654,10 @@ class BeeCluster(object):
 	def BCUnLock(self):
 		self.internal_global_lock.release()
 
-	def waitUnfinishedTasks():
+	def waitUnfinishedTasks(self):
 		while True:
 			sleep(0.1)
-			cc = bc.active_task_counter
+			cc = self.active_task_counter
 			if cc == 0:
 
 				break
